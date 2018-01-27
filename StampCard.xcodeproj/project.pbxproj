@@ -12,9 +12,16 @@
 		A9E4DB2C201AE917006B8B4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E4DB2A201AE917006B8B4C /* Main.storyboard */; };
 		A9E4DB2E201AE917006B8B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9E4DB2D201AE917006B8B4C /* Assets.xcassets */; };
 		A9E4DB31201AE917006B8B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E4DB2F201AE917006B8B4C /* LaunchScreen.storyboard */; };
+		A9E4DB39201AEA47006B8B4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4DB38201AEA47006B8B4C /* LoginViewController.swift */; };
+		A9E4DB3B201AED8F006B8B4C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4DB3A201AED8F006B8B4C /* ProfileViewController.swift */; };
+		A9E4DB3D201AF8DD006B8B4C /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4DB3C201AF8DD006B8B4C /* ShopCell.swift */; };
+		A9E4DB3F201AF930006B8B4C /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4DB3E201AF930006B8B4C /* Shops.swift */; };
+		A9E4DB41201BF681006B8B4C /* StampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4DB40201BF681006B8B4C /* StampViewController.swift */; };
+		FE4FA2D62E2DE068D839D1A3 /* Pods_StampCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9D9F15F77EF52A0A5334FD /* Pods_StampCard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A9D9F15F77EF52A0A5334FD /* Pods_StampCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StampCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E4DB23201AE917006B8B4C /* StampCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StampCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E4DB26201AE917006B8B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9E4DB28201AE917006B8B4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,13 @@
 		A9E4DB2D201AE917006B8B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9E4DB30201AE917006B8B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9E4DB32201AE917006B8B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9E4DB38201AEA47006B8B4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A9E4DB3A201AED8F006B8B4C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A9E4DB3C201AF8DD006B8B4C /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		A9E4DB3E201AF930006B8B4C /* Shops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
+		A9E4DB40201BF681006B8B4C /* StampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampViewController.swift; sourceTree = "<group>"; };
+		AAAF88FC83A76610608FCC7A /* Pods-StampCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StampCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-StampCard/Pods-StampCard.release.xcconfig"; sourceTree = "<group>"; };
+		FB9911E0C466C1B91AC054F6 /* Pods-StampCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StampCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StampCard/Pods-StampCard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4FA2D62E2DE068D839D1A3 /* Pods_StampCard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		913F6A6A5F3D7B2F732476A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB9911E0C466C1B91AC054F6 /* Pods-StampCard.debug.xcconfig */,
+				AAAF88FC83A76610608FCC7A /* Pods-StampCard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A9E4DB1A201AE917006B8B4C = {
 			isa = PBXGroup;
 			children = (
 				A9E4DB25201AE917006B8B4C /* StampCard */,
 				A9E4DB24201AE917006B8B4C /* Products */,
+				913F6A6A5F3D7B2F732476A2 /* Pods */,
+				F3E4BCACED1FAA8E0B6A3732 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +82,25 @@
 			children = (
 				A9E4DB26201AE917006B8B4C /* AppDelegate.swift */,
 				A9E4DB28201AE917006B8B4C /* ViewController.swift */,
+				A9E4DB38201AEA47006B8B4C /* LoginViewController.swift */,
+				A9E4DB3A201AED8F006B8B4C /* ProfileViewController.swift */,
+				A9E4DB3C201AF8DD006B8B4C /* ShopCell.swift */,
+				A9E4DB3E201AF930006B8B4C /* Shops.swift */,
+				A9E4DB40201BF681006B8B4C /* StampViewController.swift */,
 				A9E4DB2A201AE917006B8B4C /* Main.storyboard */,
 				A9E4DB2D201AE917006B8B4C /* Assets.xcassets */,
 				A9E4DB2F201AE917006B8B4C /* LaunchScreen.storyboard */,
 				A9E4DB32201AE917006B8B4C /* Info.plist */,
 			);
 			path = StampCard;
+			sourceTree = "<group>";
+		};
+		F3E4BCACED1FAA8E0B6A3732 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A9D9F15F77EF52A0A5334FD /* Pods_StampCard.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9E4DB35201AE917006B8B4C /* Build configuration list for PBXNativeTarget "StampCard" */;
 			buildPhases = (
+				EA8BF94370EFE5B6E9F675FD /* [CP] Check Pods Manifest.lock */,
 				A9E4DB1F201AE917006B8B4C /* Sources */,
 				A9E4DB20201AE917006B8B4C /* Frameworks */,
 				A9E4DB21201AE917006B8B4C /* Resources */,
+				1FE7F4E53F850B99437EF39D /* [CP] Embed Pods Frameworks */,
+				ADFBECA569D5B7D151EE0730 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +173,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FE7F4E53F850B99437EF39D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StampCard/Pods-StampCard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StampCard/Pods-StampCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADFBECA569D5B7D151EE0730 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StampCard/Pods-StampCard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA8BF94370EFE5B6E9F675FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StampCard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9E4DB1F201AE917006B8B4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E4DB39201AEA47006B8B4C /* LoginViewController.swift in Sources */,
+				A9E4DB41201BF681006B8B4C /* StampViewController.swift in Sources */,
 				A9E4DB29201AE917006B8B4C /* ViewController.swift in Sources */,
+				A9E4DB3B201AED8F006B8B4C /* ProfileViewController.swift in Sources */,
 				A9E4DB27201AE917006B8B4C /* AppDelegate.swift in Sources */,
+				A9E4DB3D201AF8DD006B8B4C /* ShopCell.swift in Sources */,
+				A9E4DB3F201AF930006B8B4C /* Shops.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +375,7 @@
 		};
 		A9E4DB36201AE917006B8B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB9911E0C466C1B91AC054F6 /* Pods-StampCard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +391,7 @@
 		};
 		A9E4DB37201AE917006B8B4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAAF88FC83A76610608FCC7A /* Pods-StampCard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
