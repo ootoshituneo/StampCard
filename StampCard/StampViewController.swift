@@ -8,22 +8,37 @@
 
 import UIKit
 
-class StampViewController: UIViewController {
+class StampViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+   
 
+    @IBOutlet weak var myCollectionView: UICollectionView!
     
-    @IBOutlet weak var labelShopname: UILabel!
+    @IBOutlet weak var labelShopName: UILabel!
     
+    var array : [String] = []
     var shopName : String?
     var stampCount : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelShopname.text = shopName!
+       labelShopName.text = shopName!
         let num: Int = Int(stampCount!)!
         
-        print(num)
-        // Do any additional setup after loading the view.
+        for _ in 1...num {
+            array.append("mac_02")
+        }
+        
+        let itemsize = UIScreen.main.bounds.width/5 - 5
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        layout.itemSize = CGSize(width: itemsize, height: itemsize)
+        
+        layout.minimumInteritemSpacing = 3
+        layout.minimumLineSpacing = 3
+        
+        myCollectionView.collectionViewLayout = layout
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,15 +46,13 @@ class StampViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return array.count
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StampCell
+        cell.myStampView.image = UIImage(named: array[indexPath.row] + ".jpg")
+        return cell
+    }
 }
