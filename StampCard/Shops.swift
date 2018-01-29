@@ -8,12 +8,12 @@
 
 import UIKit
 
-struct Shops: Codable {
+class Shops: Codable {
     let shopName : String
-    let stampCount : Int?
+    let stampCount : String
     let shopId : String
     
-    init(shopName : String, stampCount : Int, shopId : String){
+    init(shopName : String, stampCount : String, shopId : String){
         self.shopName = shopName
         self.stampCount = stampCount
         self.shopId = shopId

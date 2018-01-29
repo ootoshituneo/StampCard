@@ -11,9 +11,18 @@ import UIKit
 class StampViewController: UIViewController {
 
     
+    @IBOutlet weak var labelShopname: UILabel!
+    
+    var shopName : String?
+    var stampCount : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        labelShopname.text = shopName!
+        let num: Int = Int(stampCount!)!
+        
+        print(num)
         // Do any additional setup after loading the view.
     }
 

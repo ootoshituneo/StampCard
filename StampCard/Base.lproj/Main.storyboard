@@ -148,6 +148,7 @@
                     <connections>
                         <outlet property="labelUsername" destination="uqk-I7-Abw" id="q0z-8U-jhA"/>
                         <outlet property="tableView" destination="wro-1Q-Anp" id="c7g-fZ-76g"/>
+                        <segue destination="kUo-vX-Dg3" kind="show" identifier="showStamp" id="CSv-z6-Qj7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mra-3h-neY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,13 +162,25 @@
                     <view key="view" contentMode="scaleToFill" id="vmM-3F-j1I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbN-kf-igD">
+                                <rect key="frame" x="76" y="97" width="218" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bAP-d7-jG3"/>
                     </view>
+                    <connections>
+                        <outlet property="labelShopname" destination="fbN-kf-igD" id="Jad-zc-ez2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VkH-qh-i4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1817" y="34"/>
+            <point key="canvasLocation" x="1816.8" y="33.733133433283363"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qkp-Xx-QP2">

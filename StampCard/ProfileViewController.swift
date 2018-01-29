@@ -19,6 +19,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //private var shops = [Shops]()
     var shops : [[String: String?]] = []
+    var selectedShopName : String = ""
+    var selectedStampCount : String = ""
     
     var userEmail : String = ""
     let GET_SHOP_URL = "https://www.goodsystem27.com/getshops.php"
@@ -106,6 +108,24 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.labelShopName.text = shop["shopName"]!
         return cell
         }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let shop = shops[indexPath.row]
+        selectedShopName = shop["shopName"]!!
+        selectedStampCount = shop["stampCount"]!!
+        performSegue(withIdentifier: "showStamp",sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showStamp") {
+            let secondVC: StampViewController = (segue.destination as? StampViewController)!
+            
+            // 11. SecondViewControllerのtextに選択した文字列を設定する
+            secondVC.shopName = selectedShopName
+            secondVC.stampCount = selectedStampCount
+        }
+        
+    }
     
    
 
