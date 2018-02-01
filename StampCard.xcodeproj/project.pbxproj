@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A9C9BC3F201F01F500AA5F42 /* StampCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9BC3E201F01F500AA5F42 /* StampCell.swift */; };
+		A9C9BC412020913000AA5F42 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9BC402020913000AA5F42 /* RegisterViewController.swift */; };
 		A9E4DB27201AE917006B8B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4DB26201AE917006B8B4C /* AppDelegate.swift */; };
 		A9E4DB29201AE917006B8B4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4DB28201AE917006B8B4C /* ViewController.swift */; };
 		A9E4DB2C201AE917006B8B4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E4DB2A201AE917006B8B4C /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		4A9D9F15F77EF52A0A5334FD /* Pods_StampCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StampCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C9BC3E201F01F500AA5F42 /* StampCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCell.swift; sourceTree = "<group>"; };
+		A9C9BC402020913000AA5F42 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A9E4DB23201AE917006B8B4C /* StampCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StampCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E4DB26201AE917006B8B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9E4DB28201AE917006B8B4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				A9E4DB3E201AF930006B8B4C /* Shops.swift */,
 				A9E4DB40201BF681006B8B4C /* StampViewController.swift */,
 				A9C9BC3E201F01F500AA5F42 /* StampCell.swift */,
+				A9C9BC402020913000AA5F42 /* RegisterViewController.swift */,
 				A9E4DB2A201AE917006B8B4C /* Main.storyboard */,
 				A9E4DB2D201AE917006B8B4C /* Assets.xcassets */,
 				A9E4DB2F201AE917006B8B4C /* LaunchScreen.storyboard */,
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C9BC412020913000AA5F42 /* RegisterViewController.swift in Sources */,
 				A9E4DB39201AEA47006B8B4C /* LoginViewController.swift in Sources */,
 				A9E4DB41201BF681006B8B4C /* StampViewController.swift in Sources */,
 				A9E4DB29201AE917006B8B4C /* ViewController.swift in Sources */,
