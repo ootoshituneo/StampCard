@@ -90,7 +90,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     ]
                     self.shops.append(shop)
                 }
-                print(self.shops.count)
+               // print(self.shops.count)
                 self.tableView.reloadData()
             }
         }
