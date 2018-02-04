@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+
+
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
@@ -25,12 +27,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     var userEmail : String = ""
     let GET_SHOP_URL = "https://www.goodsystem27.com/getshops.php"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.delegate = self
         tableView.dataSource = self
-
+        
         //hiding back button
         let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
         navigationItem.leftBarButtonItem = backButton
@@ -48,8 +50,35 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         //getDhopData
         downloadShopData()
-       
+    
     }
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//
+//        //hiding back button
+//        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
+//        navigationItem.leftBarButtonItem = backButton
+//
+//        //getting user data from defaults
+//        let defaultValues = UserDefaults.standard
+//        if let userName = defaultValues.string(forKey: "username"){
+//            //setting the name to label
+//            labelUsername.text = userName
+//        } else {
+//
+//        }
+//
+//        userEmail = defaultValues.string(forKey: "useremail")!
+//
+//        //getDhopData
+//        downloadShopData()
+//
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -127,6 +156,36 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-   
+    func updateTableView() {
+        setUp()
+        self.tableView.reloadData()
+    }
+    
+    func setUp(){
+        let parameters: Parameters=[
+            "useremail":userEmail
+        ]
+        
+        Alamofire.request(GET_SHOP_URL, method: .get, parameters: parameters).responseJSON
+            {
+                response in
+                guard let object = response.result.value else{
+                    return
+                }
+                
+                let json = JSON(object)
+                json.forEach{(_,json) in
+                    
+                    let shop : [String: String?] = [
+                        "shopId":json["shopId"].string,
+                        "shopName":json["shopName"].string,
+                        "stampCount":json["stampCount"].string
+                    ]
+                    self.shops.append(shop)
+                }
+                // print(self.shops.count)
+                self.tableView.reloadData()
+        }
+    }
 
 }

@@ -24,10 +24,13 @@ class StampViewController: UIViewController,UICollectionViewDelegate,UICollectio
         
        labelShopName.text = shopName!
         let num: Int = Int(stampCount!)!
-        
-        for _ in 1...num {
-            array.append("mac_02")
+        if(num != 0){
+            for _ in 1...num {
+                array.append("mac_02")
+            }
         }
+        
+    
         
         let itemsize = UIScreen.main.bounds.width/5 - 5
         let layout = UICollectionViewFlowLayout()

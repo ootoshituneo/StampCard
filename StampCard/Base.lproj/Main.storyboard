@@ -169,53 +169,57 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbx-0d-m1x">
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
-                                <subviews>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s48-ax-bUQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="yyu-wh-H3P"/>
-                                        </constraints>
-                                        <items>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="KMa-1I-kzK"/>
-                                            <barButtonItem title="選択" id="pcT-Gc-x23">
-                                                <connections>
-                                                    <action selector="selet:" destination="YLl-Fh-nQN" id="WGm-HY-mMn"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </items>
-                                    </toolbar>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-GZ-QV1">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                    </pickerView>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="NQd-GZ-QV1" firstAttribute="top" secondItem="jbx-0d-m1x" secondAttribute="top" id="8yZ-y7-VSa"/>
-                                    <constraint firstAttribute="trailing" secondItem="s48-ax-bUQ" secondAttribute="trailing" id="E2y-Os-FNb"/>
-                                    <constraint firstItem="s48-ax-bUQ" firstAttribute="top" secondItem="jbx-0d-m1x" secondAttribute="top" id="GV6-Kd-X4V"/>
-                                    <constraint firstAttribute="trailing" secondItem="NQd-GZ-QV1" secondAttribute="trailing" id="Q3K-gC-cNv"/>
-                                    <constraint firstAttribute="bottom" secondItem="NQd-GZ-QV1" secondAttribute="bottom" id="fMj-D6-dvb"/>
                                     <constraint firstAttribute="height" constant="200" id="gJx-Ko-x0R"/>
-                                    <constraint firstItem="NQd-GZ-QV1" firstAttribute="leading" secondItem="jbx-0d-m1x" secondAttribute="leading" id="jXq-OT-FCq"/>
-                                    <constraint firstItem="s48-ax-bUQ" firstAttribute="leading" secondItem="jbx-0d-m1x" secondAttribute="leading" id="vbc-lJ-yvi"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqZ-4X-F0g">
-                                <rect key="frame" x="10" y="120" width="355" height="247"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="スタンプカードの使えるお店を選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqZ-4X-F0g">
+                                <rect key="frame" x="10" y="98" width="355" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1wv-dd-TSs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRV-Vd-6dn">
+                                <rect key="frame" x="10" y="320" width="355" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IOt-9D-vJY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-GZ-QV1">
+                                <rect key="frame" x="4" y="208" width="375" height="200"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dp6-aU-dfb">
+                                <rect key="frame" x="114" y="458" width="147" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="カードを追加する"/>
+                                <connections>
+                                    <action selector="saveCardPressed:" destination="YLl-Fh-nQN" eventType="touchUpInside" id="jAL-Uj-T2V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="sRV-Vd-6dn" firstAttribute="leading" secondItem="LsE-Bo-nGy" secondAttribute="leading" constant="10" id="1gK-4j-RXt"/>
+                            <constraint firstItem="NQd-GZ-QV1" firstAttribute="top" secondItem="rOd-mf-DAu" secondAttribute="top" constant="208" id="4Se-Gr-J00"/>
                             <constraint firstItem="LsE-Bo-nGy" firstAttribute="trailing" secondItem="jbx-0d-m1x" secondAttribute="trailing" id="5sJ-2e-wz1"/>
                             <constraint firstItem="jbx-0d-m1x" firstAttribute="bottom" secondItem="LsE-Bo-nGy" secondAttribute="bottom" id="6iR-uG-RWl"/>
+                            <constraint firstItem="LsE-Bo-nGy" firstAttribute="trailing" secondItem="cqZ-4X-F0g" secondAttribute="trailing" constant="10" id="7F9-AG-nq4"/>
+                            <constraint firstAttribute="bottom" secondItem="NQd-GZ-QV1" secondAttribute="bottom" constant="259" id="Bum-3Z-BWM"/>
+                            <constraint firstItem="dp6-aU-dfb" firstAttribute="centerX" secondItem="rOd-mf-DAu" secondAttribute="centerX" id="LSg-Xz-atw"/>
+                            <constraint firstItem="cqZ-4X-F0g" firstAttribute="leading" secondItem="LsE-Bo-nGy" secondAttribute="leading" constant="10" id="PxM-R5-HMZ"/>
                             <constraint firstItem="jbx-0d-m1x" firstAttribute="leading" secondItem="LsE-Bo-nGy" secondAttribute="leading" id="SiN-pE-9IU"/>
-                            <constraint firstItem="jbx-0d-m1x" firstAttribute="top" secondItem="cqZ-4X-F0g" secondAttribute="bottom" constant="100" id="edK-wX-Lbz"/>
-                            <constraint firstItem="cqZ-4X-F0g" firstAttribute="leading" secondItem="LsE-Bo-nGy" secondAttribute="leading" constant="10" id="mrl-RK-VR7"/>
-                            <constraint firstItem="LsE-Bo-nGy" firstAttribute="trailing" secondItem="cqZ-4X-F0g" secondAttribute="trailing" constant="10" id="uoQ-zy-DbO"/>
-                            <constraint firstItem="cqZ-4X-F0g" firstAttribute="top" secondItem="LsE-Bo-nGy" secondAttribute="top" constant="100" id="xPP-u7-Oyk"/>
+                            <constraint firstAttribute="trailing" secondItem="NQd-GZ-QV1" secondAttribute="trailing" constant="-4" id="UfH-zW-kHU"/>
+                            <constraint firstItem="LsE-Bo-nGy" firstAttribute="trailing" secondItem="sRV-Vd-6dn" secondAttribute="trailing" constant="10" id="f0c-Gx-s3V"/>
+                            <constraint firstItem="NQd-GZ-QV1" firstAttribute="top" secondItem="cqZ-4X-F0g" secondAttribute="bottom" constant="10" id="kp5-zV-WUY"/>
+                            <constraint firstItem="dp6-aU-dfb" firstAttribute="top" secondItem="NQd-GZ-QV1" secondAttribute="bottom" constant="50" id="sw7-RA-lXi"/>
+                            <constraint firstItem="NQd-GZ-QV1" firstAttribute="leading" secondItem="rOd-mf-DAu" secondAttribute="leading" constant="4" id="zt7-E4-kkj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LsE-Bo-nGy"/>
                     </view>
@@ -223,11 +227,13 @@
                         <outlet property="containerView" destination="jbx-0d-m1x" id="Hf4-9X-MRG"/>
                         <outlet property="pickerView" destination="NQd-GZ-QV1" id="pgb-Q5-96m"/>
                         <outlet property="resLabel" destination="cqZ-4X-F0g" id="fow-dh-swc"/>
+                        <outlet property="saveCard" destination="dp6-aU-dfb" id="RWa-fJ-eb5"/>
+                        <outlet property="selectedShop" destination="sRV-Vd-6dn" id="ctG-tF-LuJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlj-Mz-nOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="811.84407796101959"/>
+            <point key="canvasLocation" x="1020" y="769.56521739130437"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ljx-Bc-LPb">
@@ -284,7 +290,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="スタンプカード追加"/>
                                 <connections>
-                                    <segue destination="YLl-Fh-nQN" kind="presentation" id="DD7-Is-OzV"/>
+                                    <segue destination="YLl-Fh-nQN" kind="show" id="1ZT-5d-oP8"/>
                                 </connections>
                             </button>
                         </subviews>

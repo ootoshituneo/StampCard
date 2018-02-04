@@ -54,7 +54,7 @@ class RegisterViewController: UIViewController {
                     let errorNum : Int = Int(String(describing: error!))!
                     
                     if(Int(errorNum) == 0){
-                        let next = self.storyboard!.instantiateViewController(withIdentifier: "SelectShop")
+                        let next = self.storyboard!.instantiateViewController(withIdentifier: "MakeCard")
                         self.present(next,animated: true, completion: nil)
                     } else {
                          self.labelMessage.text = jasonData.value(forKey: "message") as! String?
