@@ -15,7 +15,7 @@ import SwiftyJSON
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var displayQR: UIImageView!
     @IBOutlet weak var labelUsername: UILabel!
     let defaultValues = UserDefaults.standard
     
@@ -23,62 +23,42 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     var shops : [[String: String?]] = []
     var selectedShopName : String = ""
     var selectedStampCount : String = ""
-    
+    var filter:CIFilter!
     var userEmail : String = ""
+    var uid : String = ""
+    
     let GET_SHOP_URL = "https://www.goodsystem27.com/getshops.php"
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
         tableView.delegate = self
         tableView.dataSource = self
+        
+        displayQR.isHidden = true
         
         //hiding back button
         let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
         navigationItem.leftBarButtonItem = backButton
-        
+
         //getting user data from defaults
         let defaultValues = UserDefaults.standard
         if let userName = defaultValues.string(forKey: "username"){
             //setting the name to label
             labelUsername.text = userName
         } else {
-            
+
         }
-        
+
         userEmail = defaultValues.string(forKey: "useremail")!
+        uid = defaultValues.string(forKey: "uid")!
         
+        print(uid)
+
         //getDhopData
         downloadShopData()
-    
+
     }
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//
-//        //hiding back button
-//        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
-//        navigationItem.leftBarButtonItem = backButton
-//
-//        //getting user data from defaults
-//        let defaultValues = UserDefaults.standard
-//        if let userName = defaultValues.string(forKey: "username"){
-//            //setting the name to label
-//            labelUsername.text = userName
-//        } else {
-//
-//        }
-//
-//        userEmail = defaultValues.string(forKey: "useremail")!
-//
-//        //getDhopData
-//        downloadShopData()
-//
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -188,4 +168,27 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
+
+    @IBAction func qrSwitch(_ sender: UISwitch) {
+        if(sender.isOn){
+            tableView.isHidden = true
+            let uid =  defaultValues.string(forKey: "uid")!
+            let data = uid.data(using: .ascii,allowLossyConversion: false)
+            filter = CIFilter(name: "CIQRCodeGenerator")
+            filter.setValue(data, forKey: "inputMessage")
+            let transform = CGAffineTransform(scaleX:10,y:10)
+            let image = UIImage(ciImage: filter.outputImage!.transformed(by: transform))
+            displayQR.image = image
+            displayQR.isHidden = false
+        }else{
+             tableView.isHidden = false
+             displayQR.isHidden = true
+        }
+    }
+    
+    
+    
 }
+
+
+

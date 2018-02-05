@@ -69,11 +69,13 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                     let userId = user.value(forKey: "id") as! Int
                     let userName = user.value(forKey: "username") as! String
                     let userEmail = user.value(forKey: "email") as! String
+                    let uId = user.value(forKey: "uid") as! String
                 
                     //    saving user values to defaults
                     self.defaultValues.set(userId, forKey: "userid")
                     self.defaultValues.set(userName, forKey: "username")
                     self.defaultValues.set(userEmail, forKey: "useremail")
+                    self.defaultValues.set(uId, forKey: "uid")
                     
         let profileViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileView") as! ProfileViewController
          self.navigationController?.pushViewController(profileViewController, animated: true)

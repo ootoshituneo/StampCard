@@ -20,6 +20,8 @@
 		A9E4DB3D201AF8DD006B8B4C /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4DB3C201AF8DD006B8B4C /* ShopCell.swift */; };
 		A9E4DB3F201AF930006B8B4C /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4DB3E201AF930006B8B4C /* Shops.swift */; };
 		A9E4DB41201BF681006B8B4C /* StampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4DB40201BF681006B8B4C /* StampViewController.swift */; };
+		A9F14A752027D68400B697F9 /* SecondProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F14A742027D68400B697F9 /* SecondProfile.swift */; };
+		A9F14A772027D6D700B697F9 /* SecondProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F14A762027D6D700B697F9 /* SecondProfileCell.swift */; };
 		FE4FA2D62E2DE068D839D1A3 /* Pods_StampCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9D9F15F77EF52A0A5334FD /* Pods_StampCard.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		A9E4DB3C201AF8DD006B8B4C /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
 		A9E4DB3E201AF930006B8B4C /* Shops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
 		A9E4DB40201BF681006B8B4C /* StampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampViewController.swift; sourceTree = "<group>"; };
+		A9F14A742027D68400B697F9 /* SecondProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondProfile.swift; sourceTree = "<group>"; };
+		A9F14A762027D6D700B697F9 /* SecondProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondProfileCell.swift; sourceTree = "<group>"; };
 		AAAF88FC83A76610608FCC7A /* Pods-StampCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StampCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-StampCard/Pods-StampCard.release.xcconfig"; sourceTree = "<group>"; };
 		FB9911E0C466C1B91AC054F6 /* Pods-StampCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StampCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StampCard/Pods-StampCard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +94,8 @@
 				A9E4DB28201AE917006B8B4C /* ViewController.swift */,
 				A9E4DB38201AEA47006B8B4C /* LoginViewController.swift */,
 				A9E4DB3A201AED8F006B8B4C /* ProfileViewController.swift */,
+				A9F14A742027D68400B697F9 /* SecondProfile.swift */,
+				A9F14A762027D6D700B697F9 /* SecondProfileCell.swift */,
 				A9E4DB3C201AF8DD006B8B4C /* ShopCell.swift */,
 				A9E4DB3E201AF930006B8B4C /* Shops.swift */,
 				A9E4DB40201BF681006B8B4C /* StampViewController.swift */,
@@ -243,12 +249,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F14A752027D68400B697F9 /* SecondProfile.swift in Sources */,
 				A9C9BC412020913000AA5F42 /* RegisterViewController.swift in Sources */,
 				A9E4DB39201AEA47006B8B4C /* LoginViewController.swift in Sources */,
 				A9E4DB41201BF681006B8B4C /* StampViewController.swift in Sources */,
 				A9E4DB29201AE917006B8B4C /* ViewController.swift in Sources */,
 				A9E4DB3B201AED8F006B8B4C /* ProfileViewController.swift in Sources */,
 				A9E4DB27201AE917006B8B4C /* AppDelegate.swift in Sources */,
+				A9F14A772027D6D700B697F9 /* SecondProfileCell.swift in Sources */,
 				A9C9BC5620236C3000AA5F42 /* SelectShopViewController.swift in Sources */,
 				A9E4DB3D201AF8DD006B8B4C /* ShopCell.swift in Sources */,
 				A9E4DB3F201AF930006B8B4C /* Shops.swift in Sources */,

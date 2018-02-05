@@ -84,9 +84,7 @@ class SelectShopViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
         func urlEncode(string: String) -> String {
             return string.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         }
-        
-        
-        
+ 
         let userId = "&userId=" + defaultValues.string(forKey: "useremail")!
         
         let jUrl = urlEncode(string: selectionsArray[pickerView.selectedRow(inComponent: 0)])
@@ -97,8 +95,8 @@ class SelectShopViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
         WebManager.downloadJson(from: finalUrl) {(resArray) in
             let answer = String(describing: resArray[0])
             if(answer == "success"){
-                let profileViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileView") as! ProfileViewController
-                self.navigationController?.pushViewController(profileViewController, animated: true)
+                let seconProfile = self.storyboard?.instantiateViewController(withIdentifier: "SecondProfile") as! SecondProfile
+                self.navigationController?.pushViewController(seconProfile, animated: true)
                
                 self.dismiss(animated: false, completion: nil)
             }else{
